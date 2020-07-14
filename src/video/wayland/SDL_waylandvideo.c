@@ -442,8 +442,7 @@ Wayland_VideoInit(_THIS)
     // Second roundtrip to receive all output events.
     WAYLAND_wl_display_roundtrip(data->display);
 
-    //// TODO: Crashes below
-    //// TODO: Wayland_InitMouse();
+    Wayland_InitMouse();
 
     /* Get the surface class name, usually the name of the application */
     data->classname = get_classname();
