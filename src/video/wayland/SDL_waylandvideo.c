@@ -358,7 +358,7 @@ display_handle_global(void *data, struct wl_registry *registry, uint32_t id,
 {
     SDL_VideoData *d = data;
 
-    /*printf("WAYLAND INTERFACE: %s\n", interface);*/
+    printf("WAYLAND INTERFACE: %s\n", interface); ////
 
     if (strcmp(interface, "wl_compositor") == 0) {
         d->compositor = wl_registry_bind(d->registry, id, &wl_compositor_interface, SDL_min(3, version));
